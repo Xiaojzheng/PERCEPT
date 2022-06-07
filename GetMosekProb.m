@@ -1,0 +1,33 @@
+function Prb=GetMosekProb;
+global Prob;
+%% Returns generated mosek problem and clears all auxiliary entities
+%Prob.ii=Prob.ii(1:Prob.nent);
+%Prob.jj=Prob.jj(1:Prob.nent);
+%Prob.vv=Prob.vv(1:Prob.nent);
+%Prob.cones=Prob.cones(1:Prob.ncones);
+Prb.a=sparse(Prob.ii(1:Prob.nent),Prob.jj(1:Prob.nent),Prob.vv(1:Prob.nent),Prob.ncons,Prob.nvars);
+[ii,jj,vv]=find(Prb.a);
+[m,n]=size(Prb.a);
+clear Prb.a;
+Prb.a=sparse(ii,jj,vv,m,n);
+clear ii;
+clear jj;
+clear vv;
+Prb.blc=Prob.blc(1:Prob.ncons);
+Prb.buc=Prob.buc(1:Prob.ncons);
+Prb.blx=Prob.blx(1:Prob.nvars);
+Prb.bux=Prob.bux(1:Prob.nvars);
+Prb.cones=Prob.cones(1:Prob.ncones);
+if Prob.nbarx>0,
+    Prb.bardim=Prob.bardim(1:Prob.nbarx);
+    Prb.barc.subj=[];
+    Prb.barc.subk=[];
+    Prb.barc.subl=[];
+    Prb.barc.val=[];
+    Prb.bara.subi=Prob.bara.subi(1:Prob.nbara);
+    Prb.bara.subj=Prob.bara.subj(1:Prob.nbara);
+    Prb.bara.subk=Prob.bara.subk(1:Prob.nbara);
+    Prb.bara.subl=Prob.bara.subl(1:Prob.nbara);
+    Prb.bara.val=Prob.bara.val(1:Prob.nbara);
+end;
+%clear Prob;
