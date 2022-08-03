@@ -39,6 +39,12 @@ You could follow the instructions listed here (http://cvxr.com/cvx/doc/mosek.htm
 3. Run cvx_setup (you may need to add the cvx folder to your matlab path) so that the MOSEK and CVX licenses can be detected.
 4. In the weights_paper.ipynb, in the command line eng.addpath(r'w64',nargout=0), you need to change the folder into your own "cvx/mosek/w64" (for Windows) or "cvx/mosek/maci64" (for Mac) folder. For example, in Mac system, it will usually be eng.addpath('/Users/yourusername/cvx/mosek/maci64',nargout=0).
 
+We recommend the users to do the following checks after installations:
+1. Run cvx_setup in Matlab, and make sure the license is valid, and the default solver is mosek.
+2. Run mosekdiag in Matlab and check if mosekopt works OK.
+
+See https://docs.mosek.com/latest/toolbox/install-interface.html for more troubleshooting.
+
 ### Step 3: Install all other required packages (gudhi and pot) for simulation_paper.ipynb
 
 1. gudhi: The easiest way to install the Python version of GUDHI is using pre-built packages via the command line: conda install -c conda-forge gudhi (more details in https://gudhi.inria.fr/python/latest/installation.html#)
