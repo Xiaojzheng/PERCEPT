@@ -35,11 +35,11 @@ For example, in Mac system, matlabroot usually is "/Applications/MATLAB_R2021a.a
 You could follow the instructions listed here (http://cvxr.com/cvx/doc/mosek.html), and we have listed the instructions briefly below:
 
 1. Download CVX (http://cvxr.com/cvx/download/) and MOSEK (https://docs.mosek.com/latest/toolbox/install-interface.html)
-2. Apply a valid license for CVX (http://cvxr.com/cvx/academic/) and MOSEK (https://www.mosek.com/products/academic-licenses/). The preferred option is to place the license file mosek.lic in the directory mosek in the user’s home directory, and the license file cvx_license.dat to a convenient location. **Make sure to set up a path for both licenses.** 
+2. Apply a valid license for CVX (http://cvxr.com/cvx/academic/) and MOSEK (https://www.mosek.com/products/academic-licenses/). The preferred option is to place the license file mosek.lic in the directory mosek in the user’s home directory, and the license file cvx_license.dat to a convenient location. **Make sure to add the directories for both licenses into your Matlab path.** 
 3. Run cvx_setup (you may need to add the cvx folder to your matlab path) so that the MOSEK and CVX licenses can be detected.
 4. In the weights_paper.ipynb, in the command line eng.addpath(r'w64',nargout=0), you need to change the folder into your own "cvx/mosek/w64" (for Windows) or "cvx/mosek/maci64" (for Mac) folder. For example, in Mac system, it will usually be eng.addpath('/Users/yourusername/cvx/mosek/maci64',nargout=0).
 
-### Step 3: Install all other required packages (gudhi and pot)
+### Step 3: Install all other required packages (gudhi and pot) for simulation_paper.ipynb
 
 1. gudhi: The easiest way to install the Python version of GUDHI is using pre-built packages via the command line: conda install -c conda-forge gudhi (more details in https://gudhi.inria.fr/python/latest/installation.html#)
 2. pot: using the command line: conda install -c conda-forge pot (more details in https://pypi.org/project/POT/)
