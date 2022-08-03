@@ -12,10 +12,11 @@ This folder includes three main files: opt_weights_tda.m, weights_paper.ipynb an
 
 3. simulation_paper.ipynb computes the detection statistics using PERCEPT, the Hotelling T, the MMD and the Wasserstein distance and generates Figure 8b in the paper. 
 
+## Here are some package installation guidelines for weights_paper.ipynb.
+
+### Step 1: Install MATLAB Engine API for Python
 
 The table (https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/support/sysreq/files/python-compatibility.pdf) gives the Python versions which are compatible with the MATLAB Engine for Python, so please make sure you have the compatible versions before installing MATLAB Engine API for Python. We highly recommend that you create a conda environment with the correct version of Python for what your version of MATLAB supports. 
-
-Step 1: Install MATLAB Engine API for Python
 
 You could follow the instructions listed here (https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html), and we have listed the instructions briefly below: 
 
@@ -24,7 +25,7 @@ You could follow the instructions listed here (https://www.mathworks.com/help/ma
 3. cd "matlabroot\extern\engines\python" (In Windows)
 4. python setup.py install
 
-Step 2: Install CVX and Mosek
+### Step 2: Install CVX and Mosek
 
 You could follow the instructions listed here (http://cvxr.com/cvx/doc/mosek.html), and we have listed the instructions briefly below:
 
