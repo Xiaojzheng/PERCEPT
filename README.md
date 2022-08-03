@@ -25,8 +25,10 @@ You could follow the instructions listed here (https://www.mathworks.com/help/ma
 
 1. Find the Matlab root folder. You can use the matlabroot command within Matlab to find it.
 2. Go to the Matlab root folder in the command line.
-3. cd "matlabroot\extern\engines\python" (In Windows)
+3. cd "matlabroot\extern\engines\python" (In Windows) or cd "matlabroot/extern/engines/python" (In Mac)
 4. python setup.py install
+
+For example, in Mac system, matlabroot usually is "/Applications/MATLAB_R2021a.app" (take MATLAB2021a as an example) and you should type the following in the command line: cd "/Applications/MATLAB_R2021a.app/extern/engines/python"
 
 ### Step 2: Install CVX and Mosek
 
@@ -36,3 +38,7 @@ You could follow the instructions listed here (http://cvxr.com/cvx/doc/mosek.htm
 2. Apply a valid license for CVX (http://cvxr.com/cvx/academic/) and MOSEK (https://www.mosek.com/products/academic-licenses/). The preferred option is to place the license file mosek.lic in the directory mosek in the user’s home directory, and the license file cvx_license.dat to a convenient location. Make sure to set up a path for both licenses. 
 3. Run cvx_setup so that the MOSEK and CVX licenses can be detected.
 
+### Step 3: Install all other required packages (gudhi and pot)
+
+1. gudhi: The easiest way to install the Python version of GUDHI is using pre-built packages via the command line: conda install -c conda-forge gudhi (more details in https://gudhi.inria.fr/python/latest/installation.html#)
+2. pot: using the command line: conda install -c conda-forge pot
