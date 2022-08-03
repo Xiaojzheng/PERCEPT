@@ -16,7 +16,10 @@ This folder includes three main files: opt_weights_tda.m, weights_paper.ipynb an
 
 ### Step 1: Install MATLAB Engine API for Python
 
-The table (https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/support/sysreq/files/python-compatibility.pdf) gives the Python versions which are compatible with the MATLAB Engine for Python, so please make sure you have the compatible versions before installing MATLAB Engine API for Python. We highly recommend that you create a conda environment with the correct version of Python for what your version of MATLAB supports. 
+The table (https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/support/sysreq/files/python-compatibility.pdf) gives the Python versions which are compatible with the MATLAB Engine for Python, so please make sure you have the compatible versions before installing MATLAB Engine API for Python. (Note that For MATLAB R2019b and earlier, Python Client Library for MATLAB Production Server is only compatible with Python
+2.7.)
+
+We highly recommend that you create a conda environment with the correct version of Python for what your version of MATLAB supports. 
 
 You could follow the instructions listed here (https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html), and we have listed the instructions briefly below: 
 
